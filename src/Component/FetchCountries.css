@@ -1,0 +1,15 @@
+.flag{
+    width:15rem;
+    height:15rem;
+    margin: auto;
+    align-content: space-around;
+    padding: 3rem;
+   
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    
+}
