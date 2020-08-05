@@ -1,0 +1,17 @@
+.selectbox {
+  transition: border 0.2s linear;
+  font-size: 12px;
+  width: 100%;
+  background: #f5f8fa;
+  color: #000;
+  padding: 8px 32px 8px 12px;
+  height: 34px;
+  border: 1px solid #e6ecf0;
+  border-radius: 50px;
+  outline: none;
+}
+
+.selectbox:focus {
+  transition: border 0.2s linear;
+  border: 2px solid orange;
+}
