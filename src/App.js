@@ -7,22 +7,30 @@ import Search from './Component/Search';
 import {useState} from 'react';
 import CountryPicker from './Component/CountryPicker.jsx';
 import RegionSelect from './Component/RegionSelect.jsx';
+import FetchCounryProfile from './Component/FetchCountryProfile.jsx'
+
+
 
 function App({countries}) {
   const [searchVal, setSearchVal] = useState('');
   const [select, setSelect] = useState([]);
+  const [selectedShow, setSelectedShow] = useState(null);
+  
   return (
     <div className="container">
       <Search searchVal={searchVal} setSearchVal={setSearchVal} />
-      {
+      
         <RegionSelect
           select={select}
           setSelect={setSelect}
           countries={countries}
           searchVal={searchVal}
         />
-      }
-      {<CountryPicker countries={countries} searchVal={searchVal} />}
+      
+      <CountryPicker countries={countries} searchVal={searchVal} />
+
+     
+      
     </div>
   );
 }

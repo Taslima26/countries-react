@@ -10,7 +10,7 @@ const RegionSelect = ({select, setSelect, countries, searchVal}) => {
 
   const HandleChange = (event) => {
     const selectedCountry = event.target.value;
-    const selectedCountries = countries.filter(
+    let selectedCountries = countries.filter(
       (country) => country.region === selectedCountry
     ); // ||
     //     (searchVal
@@ -20,6 +20,7 @@ const RegionSelect = ({select, setSelect, countries, searchVal}) => {
     // ));
     console.log(selectedCountries);
     setSelect(selectedCountries);
+    selectedCountries = '';
   };
   console.log(select);
   return (
@@ -30,7 +31,7 @@ const RegionSelect = ({select, setSelect, countries, searchVal}) => {
         ))}
       </select>
       <div>
-        <FetchCountries countries={select} />
+        { <FetchCountries countries={select} /> }
       </div>
     </div>
   );
