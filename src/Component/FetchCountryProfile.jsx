@@ -6,8 +6,6 @@ const FetchCountryProfile = ({country, goBack}) => {
     goBack();
   };
   return (
-    // <Link to='/details'>
-
     <div className="country">
       <button onClick={goBackToAllCountries}>Go back!!</button>
       <div>
@@ -29,8 +27,6 @@ const FetchCountryProfile = ({country, goBack}) => {
         </p>
       </div>
     </div>
-
-    //   </Link>)
   );
 };
 

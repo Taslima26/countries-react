@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './FetchCountries.css';
 import FetchCountryProfile from './FetchCountryProfile';
+import './Header.css';
 
 const FetchCountries = ({countries}) => {
-  const [clickCountry, setClickCountry] = useState('');
   const [viewOneCountry, setViewOneCountry] = useState();
 
   const handleClick = (event) => {
@@ -41,13 +41,6 @@ const FetchCountries = ({countries}) => {
           <div className="capital">Capital:{country.capital}</div>
         </div>
       ))}
-      {/* {countries.map(item => (
-        <FetchCountryProfile
-          clickCountry={item}
-          key={item.name}
-          handleClick={handleClick}
-           />
-      ))} */}
     </div>
   );
 };
