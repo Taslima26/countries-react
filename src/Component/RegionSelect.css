@@ -9,6 +9,8 @@
   border: 1px solid #e6ecf0;
   border-radius: 50px;
   outline: none;
+  margin-top: 3.1rem;
+  margin-left: 2rem;
 }
 
 .selectbox:focus {
