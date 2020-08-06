@@ -4,12 +4,12 @@ import FetchCountryProfile from './FetchCountryProfile';
 import './Header.css';
 
 const FetchCountries = ({countries}) => {
-  const [viewOneCountry, setViewOneCountry] = useState();
+  const [viewOneCountry, setViewOneCountry] = useState ();
 
-  const handleClick = (event) => {
+  const handleClick = event => {
     let countryId = event.target.id;
-    let selectedcountry = countries.find((p) => p.name === countryId);
-    setViewOneCountry(selectedcountry);
+    let selectedcountry = countries.find (p => p.name === countryId);
+    setViewOneCountry (selectedcountry);
   };
 
   if (viewOneCountry) {
@@ -23,19 +23,26 @@ const FetchCountries = ({countries}) => {
 
   return (
     <div className="container">
-      {countries.map((country) => (
+      {countries.map (country => (
         <div>
-          <img className="flag" src={country.flag} alt="country flag" /> '
+          <img
+            id={country.name}
+            onClick={handleClick}
+            className="flag"
+            src={country.flag}
+            alt="country flag"
+          />
+
           <div className="Name">
-            <button id={country.name} onClick={handleClick}>
-              Name:{country.name}
-            </button>
+
+            Name:{country.name}
+
           </div>
           <div className="population">
             Population:
             {country.population
-              .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              .toString ()
+              .replace (/\B(?=(\d{3})+(?!\d))/g, ',')}
           </div>
           <div className="region">Region:{country.region}</div>
           <div className="capital">Capital:{country.capital}</div>
